@@ -17,10 +17,12 @@ import UIKit
  There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
  */
 
-
+var newTime: String!
+var pageDataTimeGlobal: [String] = ["7:00 AM", "6:45 AM"]
+//var pageDayGlobal: [String] = 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData: [String] = ["7:00 AM"]
+    var pageData = pageDataTimeGlobal
 
 
     override init() {
@@ -28,8 +30,8 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         // Create the data model.
 //        let dateFormatter = NSDateFormatter()
 //        pageData = dateFormatter.monthSymbols
-    }
 
+    }
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
         // Return the data view controller for the given index.
         if (self.pageData.count == 0) || (index >= self.pageData.count) {
@@ -71,6 +73,12 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             return nil
         }
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+    }
+    
+    func addNewTimer() {
+        newTime = "6:45"
+        pageData.append(newTime)
+        
     }
 
 }

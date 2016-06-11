@@ -28,7 +28,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.dataSource = self.modelController
 
         self.addChildViewController(self.pageViewController!)
-        self.view.addSubview(self.pageViewController!.view)wllow world what is the heloloksjdlqi iojhdlK lJdiuf ,knbqwkjh( kaiof)
+        self.view.addSubview(self.pageViewController!.view)
 
         // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
         var pageViewRect = self.view.bounds
@@ -85,6 +85,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
         return .Mid
     }
+    
 
 
 }
