@@ -18,8 +18,8 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.Background.layer.cornerRadius = self.Background.frame.size.width / 0.2;
-        self.Background.clipsToBounds = true;
+       // self.Background.layer.cornerRadius = self.Background.frame.size.width / 0.2;
+        //self.Background.clipsToBounds = true;
         // Do any additional setup after loading the view, typically from a nib.
         //print(pageDataGlobal[0])
     }

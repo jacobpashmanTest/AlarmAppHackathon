@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01EEE6B91D0CCED0008411F9 /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEE6B81D0CCED0008411F9 /* StatsController.swift */; };
+		01EEE6BB1D0CCEE0008411F9 /* PlusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEE6BA1D0CCEE0008411F9 /* PlusController.swift */; };
 		985697E51D0C9B84004AE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E41D0C9B84004AE228 /* AppDelegate.swift */; };
 		985697E71D0C9B84004AE228 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E61D0C9B84004AE228 /* RootViewController.swift */; };
 		985697E91D0C9B84004AE228 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E81D0C9B84004AE228 /* DataViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01EEE6B81D0CCED0008411F9 /* StatsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
+		01EEE6BA1D0CCEE0008411F9 /* PlusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusController.swift; sourceTree = "<group>"; };
 		985697E11D0C9B84004AE228 /* Alarm App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alarm App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		985697E41D0C9B84004AE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985697E61D0C9B84004AE228 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				985697E41D0C9B84004AE228 /* AppDelegate.swift */,
 				985697E61D0C9B84004AE228 /* RootViewController.swift */,
 				985697E81D0C9B84004AE228 /* DataViewController.swift */,
+				01EEE6B81D0CCED0008411F9 /* StatsController.swift */,
+				01EEE6BA1D0CCEE0008411F9 /* PlusController.swift */,
 				985697EA1D0C9B84004AE228 /* ModelController.swift */,
 				985697EC1D0C9B84004AE228 /* Main.storyboard */,
 				985697EF1D0C9B84004AE228 /* Assets.xcassets */,
@@ -264,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				985697E71D0C9B84004AE228 /* RootViewController.swift in Sources */,
+				01EEE6BB1D0CCEE0008411F9 /* PlusController.swift in Sources */,
+				01EEE6B91D0CCED0008411F9 /* StatsController.swift in Sources */,
 				985697EB1D0C9B84004AE228 /* ModelController.swift in Sources */,
 				985697E91D0C9B84004AE228 /* DataViewController.swift in Sources */,
 				985697E51D0C9B84004AE228 /* AppDelegate.swift in Sources */,
