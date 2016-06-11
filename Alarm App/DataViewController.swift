@@ -13,9 +13,13 @@ class DataViewController: UIViewController {
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
 
+    @IBOutlet var Background: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.Background.layer.cornerRadius = self.Background.frame.size.width / 0.2;
+        self.Background.clipsToBounds = true;
         // Do any additional setup after loading the view, typically from a nib.
     }
 
