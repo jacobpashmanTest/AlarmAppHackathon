@@ -18,11 +18,12 @@ import UIKit
  */
 
 var newTime: String!
-var pageDataTimeGlobal: [String] = ["7:00 AM", "6:45 AM"]
-//var pageDayGlobal: [String] = 
+var pageAmountGlobal: [String] = ["test"]
+var pageDataTimeGlobal: [NSDate]!
+var pageDayGlobal: [String]!
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData = pageDataTimeGlobal
+    var pageData = pageAmountGlobal
 
 
     override init() {
