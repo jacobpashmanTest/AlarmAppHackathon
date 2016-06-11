@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					985697E01D0C9B84004AE228 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KGN5G34954;
 					};
 					985697F81D0C9B84004AE228 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -409,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Alarm App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManzanitaLabs.Alarm-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Alarm App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManzanitaLabs.Alarm-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -492,6 +499,7 @@
 				9856980F1D0C9B84004AE228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985698101D0C9B84004AE228 /* Build configuration list for PBXNativeTarget "Alarm AppTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +508,7 @@
 				985698121D0C9B84004AE228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985698131D0C9B84004AE228 /* Build configuration list for PBXNativeTarget "Alarm AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +517,7 @@
 				985698151D0C9B84004AE228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
