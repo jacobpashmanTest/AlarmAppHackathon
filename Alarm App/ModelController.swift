@@ -80,7 +80,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         defaults.setObject(currentTime, forKey: "currentTime")
         print(NSDate())
                 _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
-        playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+        //playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
         test()
 
     }
