@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 985697DC1D0C9B84004AE228 /* Build configuration list for PBXProject "Alarm App" */;
+			buildConfigurationList = 985697DC1D0C9B84004AE228 /* Build configuration list for PBXProject "Adaptive Alarms" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -586,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		985697DC1D0C9B84004AE228 /* Build configuration list for PBXProject "Alarm App" */ = {
+		985697DC1D0C9B84004AE228 /* Build configuration list for PBXProject "Adaptive Alarms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9856980B1D0C9B84004AE228 /* Debug */,

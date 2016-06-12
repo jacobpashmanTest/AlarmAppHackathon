@@ -17,7 +17,7 @@
                BlueprintIdentifier = "985697E01D0C9B84004AE228"
                BuildableName = "Alarm App.app"
                BlueprintName = "Alarm App"
-               ReferencedContainer = "container:Alarm App.xcodeproj">
+               ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "985697F81D0C9B84004AE228"
                BuildableName = "Alarm AppTests.xctest"
                BlueprintName = "Alarm AppTests"
-               ReferencedContainer = "container:Alarm App.xcodeproj">
+               ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "985698031D0C9B84004AE228"
                BuildableName = "Alarm AppUITests.xctest"
                BlueprintName = "Alarm AppUITests"
-               ReferencedContainer = "container:Alarm App.xcodeproj">
+               ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "985697E01D0C9B84004AE228"
             BuildableName = "Alarm App.app"
             BlueprintName = "Alarm App"
-            ReferencedContainer = "container:Alarm App.xcodeproj">
+            ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "985697E01D0C9B84004AE228"
             BuildableName = "Alarm App.app"
             BlueprintName = "Alarm App"
-            ReferencedContainer = "container:Alarm App.xcodeproj">
+            ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "985697E01D0C9B84004AE228"
             BuildableName = "Alarm App.app"
             BlueprintName = "Alarm App"
-            ReferencedContainer = "container:Alarm App.xcodeproj">
+            ReferencedContainer = "container:Adaptive Alarms.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
