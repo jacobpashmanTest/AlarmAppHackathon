@@ -22,7 +22,7 @@ import MediaPlayer
 let defaults = NSUserDefaults.standardUserDefaults()
 var newTime: String!
 var pageAmountGlobal: [String] = ["12:00 AM"]
-var pageDataTimeGlobal: [NSDate] = []
+var pageDataTimeGlobal: [NSDate] = [NSDate()]
 var pageDayGlobal: [String]!
 var snoozeTime: [Int]!
 
@@ -35,12 +35,14 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         
         if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce"){
             print("App already launched")
-            pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
-            pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
+           // pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
+            //pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
             pageData = pageAmountGlobal
             return true
         }else{
             defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            defaults.setObject(["12:00 AM"], forKey: "pageAmountGLobal")
+            defaults.setObject(["test"], forKey: "pageDataTimeGlobal")
             print("App launched first time")
             return false
         }
@@ -51,7 +53,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         let newDate: NSDate = cal.dateBySettingHour(14, minute: 25, second: 0, ofDate: date, options: NSCalendarOptions())!
         pageData = pageAmountGlobal
-        let currentTime = defaults.objectForKey("currentTime") as! NSDate!
+        //let currentTime = defaults.objectForKey("currentTime") as! NSDate!
         print(newDate)
         if NSDate() ==  newDate {
             self.playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
@@ -77,7 +79,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             view.value = 0.5
         }
         let currentTime: NSDate = NSDate()
-        defaults.setObject(currentTime, forKey: "currentTime")
+        //defaults.setObject(currentTime, forKey: "currentTime")
         print(NSDate())
                 _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
         //playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")

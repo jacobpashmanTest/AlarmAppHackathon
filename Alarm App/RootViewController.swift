@@ -45,8 +45,8 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
             NSUserDefaults.standardUserDefaults().synchronize();
         } else {
-            pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
-            pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
+            //pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
+            //pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
         }
     }
     

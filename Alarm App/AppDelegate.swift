@@ -24,9 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func createLocalNotification() {
         print("Date \(NSDate())")
-        let date: NSDate = NSDate()
-        let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        let newDate: NSDate = cal.dateBySettingHour(16, minute: 42, second: 0, ofDate: date, options: NSCalendarOptions())!
         let localNotification = UILocalNotification()
 //        let time = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
 //        let time2 = time[1]
