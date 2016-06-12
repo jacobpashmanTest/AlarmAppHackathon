@@ -80,25 +80,25 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         defaults.setObject(currentTime, forKey: "currentTime")
         print(NSDate())
                 _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
-        //playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+        playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
         test()
 
     }
     var backgroundMusicPlayer = AVAudioPlayer()
     func test () {
-        while 1 == 1 {
-            let date: NSDate = NSDate()
-            let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-            let newDate: NSDate = cal.dateBySettingHour(14, minute: 44, second: 0, ofDate: date, options: NSCalendarOptions())!
-            pageData = pageAmountGlobal
-            let currentTime = defaults.objectForKey("currentTime") as! NSDate!
-            //print(newDate)
-            if NSDate() ==  newDate {
-                playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
-                print("it ran)")
-            }
+//        while 1 == 1 {
+//            let date: NSDate = NSDate()
+//            let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+//            let newDate: NSDate = cal.dateBySettingHour(14, minute: 51, second: 0, ofDate: date, options: NSCalendarOptions())!
+//            pageData = pageAmountGlobal
+//            let currentTime = defaults.objectForKey("currentTime") as! NSDate!
+//            //print(newDate)
+//            if NSDate() ==  newDate {
+//                      playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+//                print("it ran)")
+//            }
   
-        }
+       // }
         
 
     }
