@@ -24,9 +24,9 @@ var pageDayGlobal: [String]!
 var snoozeTime: [Int]!
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
-
     
-        var pageData = pageAmountGlobal
+    
+    var pageData = pageAmountGlobal
     func isAppAlreadyLaunchedOnce()->Bool{
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -42,23 +42,23 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             return false
         }
     }
-
+    
     func reloadPageData() {
         pageData = pageAmountGlobal
         
     }
-
-
-
+    
+    
+    
     override init() {
         super.init()
         // Create the data model.
-//        let dateFormatter = NSDateFormatter()
-//        pageData = dateFormatter.monthSymbols
-         _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
-
-
-
+        //        let dateFormatter = NSDateFormatter()
+        //        pageData = dateFormatter.monthSymbols
+        _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
+        
+        
+        
     }
     
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
@@ -66,21 +66,21 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         if (self.pageData.count == 0) || (index >= self.pageData.count) {
             return nil
         }
-
+        
         // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as! DataViewController
         dataViewController.dataObject = self.pageData[index]
         return dataViewController
     }
-
+    
     func indexOfViewController(viewController: DataViewController) -> Int {
         // Return the index of the given data view controller.
         // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
         return pageData.indexOf(viewController.dataObject) ?? NSNotFound
     }
-
+    
     // MARK: - Page View Controller Data Source
-
+    
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController as! DataViewController)
         if (index == 0) || (index == NSNotFound) {
@@ -90,7 +90,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         index -= 1
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
-
+    
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController as! DataViewController)
         if index == NSNotFound {
@@ -109,6 +109,6 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         pageData.append(newTime)
         
     }
-
+    
 }
 
