@@ -44,7 +44,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5av-pA-t6F">
                                 <rect key="frame" x="364" y="28" width="30" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Spp-L9-ART" kind="show" id="HMr-rb-9x7"/>
                                 </connections>
@@ -52,10 +54,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cg-da-Gzc">
                                 <rect key="frame" x="20" y="20" width="44" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Sats"/>
+                                <state key="normal" title="Sats">
+                                    <color key="titleColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n86-FE-HfC" kind="show" id="Vrh-6I-Nv9"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.045018125042512125" green="1" blue="0.30634187657083911" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.58823529411764708" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -78,28 +85,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LGG-oB-Sy1">
-                                <rect key="frame" x="-88" y="175" width="560" height="17"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utS-t0-DRU">
                                 <rect key="frame" x="18" y="20" width="48" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="show" id="GuI-76-qMy"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.58823529409999997" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTp-Us-4h1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="644"/>
+            <point key="canvasLocation" x="937" y="678"/>
         </scene>
         <!--Plus Controller-->
         <scene sceneID="zBX-yi-xgC">
@@ -113,12 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nWJ-eh-nZB">
-                                <rect key="frame" x="-88" y="175" width="560" height="17"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-yB-LF6">
                                 <rect key="frame" x="364" y="22" width="30" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -126,23 +123,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLt-ZW-VSy">
                                 <rect key="frame" x="18" y="20" width="48" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="S4R-Ja-viH" kind="show" id="q5e-fK-PlX"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.045018125040000002" green="1" blue="0.30634187660000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.58823529409999997" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y40-li-j0V"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSN-1T-hhI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="625"/>
+            <point key="canvasLocation" x="1325" y="-235"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GuI-76-qMy"/>
+        <segue reference="q5e-fK-PlX"/>
     </inferredMetricsTieBreakers>
 </document>
