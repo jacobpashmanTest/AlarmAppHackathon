@@ -11,14 +11,6 @@ import AVFoundation
 import AVKit
 import MediaPlayer
 
-/*
- A controller object that manages a simple model -- a collection of month names.
- 
- The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
- It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
- 
- There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
- */
 let defaults = NSUserDefaults.standardUserDefaults()
 var newTime: String!
 var pageAmountGlobal: [String] = ["12:00 AM"]
@@ -65,10 +57,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     
     override init() {
         super.init()
-        // Create the data model.
-        //        let dateFormatter = NSDateFormatter()
-        //        pageData = dateFormatter.monthSymbols
-
+        
         
        var silence_audio = setupAudioPlayerWithFile("sunnyalarm_GUwAcclY2", type:"wav");
         silence_audio?.numberOfLoops = -1;
@@ -88,20 +77,6 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     }
     var backgroundMusicPlayer = AVAudioPlayer()
     func test () {
-//        while 1 == 1 {
-//            let date: NSDate = NSDate()
-//            let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-//            let newDate: NSDate = cal.dateBySettingHour(14, minute: 51, second: 0, ofDate: date, options: NSCalendarOptions())!
-//            pageData = pageAmountGlobal
-//            let currentTime = defaults.objectForKey("currentTime") as! NSDate!
-//            //print(newDate)
-//            if NSDate() ==  newDate {
-//                      playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
-//                print("it ran)")
-//            }
-  
-       // }
-        
 
     }
     func playBackgroundMusic(filename: String) {
@@ -121,14 +96,14 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         
     }
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
-        //1
+        
         let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
         let url = NSURL.fileURLWithPath(path!)
         
-        //2
+        
         var audioPlayer:AVAudioPlayer?
         
-        // 3
+        
         do {
             try audioPlayer = AVAudioPlayer(contentsOfURL: url)
         } catch {
@@ -138,24 +113,20 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         return audioPlayer
     }
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
-        // Return the data view controller for the given index.
         if (self.pageData.count == 0) || (index >= self.pageData.count) {
             return nil
         }
         
-        // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as! DataViewController
         dataViewController.dataObject = self.pageData[index]
         return dataViewController
     }
     
     func indexOfViewController(viewController: DataViewController) -> Int {
-        // Return the index of the given data view controller.
-        // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
+        
         return pageData.indexOf(viewController.dataObject) ?? NSNotFound
     }
     
-    // MARK: - Page View Controller Data Source
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController as! DataViewController)
