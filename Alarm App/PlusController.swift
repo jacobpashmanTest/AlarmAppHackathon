@@ -36,8 +36,7 @@ class PlusController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         print("alarmTime \(pageDataTimeGlobal)")
         
     }
-    //MARK: - Delegates and data sources
-    //MARK: Data Sources
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -45,13 +44,11 @@ class PlusController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         return pickerData.count
     }
     
-    //MARK: Delegates
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //minuteLessPicker.text = pickerData[row]
     }
     
 }
