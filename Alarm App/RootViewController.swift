@@ -38,6 +38,16 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.view.frame = pageViewRect
 
         self.pageViewController!.didMoveToParentViewController(self)
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
+            //Put any code here and it will be executed only once.
+            print("Is a first launch")
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
+            NSUserDefaults.standardUserDefaults().synchronize();
+        } else {
+//            pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
+//            pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
+        }
     }
 
 

@@ -25,13 +25,30 @@ var snoozeTime: [Int]!
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData = pageAmountGlobal
     
+        var pageData = pageAmountGlobal
+    func isAppAlreadyLaunchedOnce()->Bool{
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let isAppAlreadyLaunchedOnce = defaults.stringForKey("isAppAlreadyLaunchedOnce"){
+            print("App already launched")
+            pageAmountGlobal = defaults.stringArrayForKey("pageAmountGlobal")!
+            pageDataTimeGlobal = defaults.objectForKey("pageDataTimeGlobal") as! [NSDate]!
+            pageData = pageAmountGlobal
+            return true
+        }else{
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            print("App launched first time")
+            return false
+        }
+    }
 
     func reloadPageData() {
         pageData = pageAmountGlobal
         
     }
+
+
 
     override init() {
         super.init()
@@ -39,6 +56,8 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 //        let dateFormatter = NSDateFormatter()
 //        pageData = dateFormatter.monthSymbols
          _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
+
+
 
     }
     
