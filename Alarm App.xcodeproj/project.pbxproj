@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01EEE6B91D0CCED0008411F9 /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEE6B81D0CCED0008411F9 /* StatsController.swift */; };
 		01EEE6BB1D0CCEE0008411F9 /* PlusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEE6BA1D0CCEE0008411F9 /* PlusController.swift */; };
+		982716B71D0D9BD2006BF372 /* sunnyalarm_GUwAcclY.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 982716B61D0D9BD2006BF372 /* sunnyalarm_GUwAcclY.mp3 */; };
+		982716B91D0D9E96006BF372 /* sunnyalarm_GUwAcclY2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 982716B81D0D9E96006BF372 /* sunnyalarm_GUwAcclY2.wav */; };
 		985697E51D0C9B84004AE228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E41D0C9B84004AE228 /* AppDelegate.swift */; };
 		985697E71D0C9B84004AE228 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E61D0C9B84004AE228 /* RootViewController.swift */; };
 		985697E91D0C9B84004AE228 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985697E81D0C9B84004AE228 /* DataViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		01EEE6B81D0CCED0008411F9 /* StatsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		01EEE6BA1D0CCEE0008411F9 /* PlusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusController.swift; sourceTree = "<group>"; };
+		982716B61D0D9BD2006BF372 /* sunnyalarm_GUwAcclY.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sunnyalarm_GUwAcclY.mp3; sourceTree = "<group>"; };
+		982716B81D0D9E96006BF372 /* sunnyalarm_GUwAcclY2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sunnyalarm_GUwAcclY2.wav; sourceTree = "<group>"; };
 		985697E11D0C9B84004AE228 /* Alarm App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alarm App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		985697E41D0C9B84004AE228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985697E61D0C9B84004AE228 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				985697EF1D0C9B84004AE228 /* Assets.xcassets */,
 				985697F11D0C9B84004AE228 /* LaunchScreen.storyboard */,
 				985697F41D0C9B84004AE228 /* Info.plist */,
+				982716B61D0D9BD2006BF372 /* sunnyalarm_GUwAcclY.mp3 */,
+				982716B81D0D9E96006BF372 /* sunnyalarm_GUwAcclY2.wav */,
 			);
 			path = "Alarm App";
 			sourceTree = "<group>";
@@ -210,6 +216,11 @@
 				TargetAttributes = {
 					985697E01D0C9B84004AE228 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					985697F81D0C9B84004AE228 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -246,7 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982716B91D0D9E96006BF372 /* sunnyalarm_GUwAcclY2.wav in Resources */,
 				985697F31D0C9B84004AE228 /* LaunchScreen.storyboard in Resources */,
+				982716B71D0D9BD2006BF372 /* sunnyalarm_GUwAcclY.mp3 in Resources */,
 				985697F01D0C9B84004AE228 /* Assets.xcassets in Resources */,
 				985697EE1D0C9B84004AE228 /* Main.storyboard in Resources */,
 			);

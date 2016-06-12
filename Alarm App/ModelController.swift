@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
+import MediaPlayer
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -44,7 +47,15 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     }
     
     func reloadPageData() {
+        let date: NSDate = NSDate()
+        let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let newDate: NSDate = cal.dateBySettingHour(14, minute: 25, second: 0, ofDate: date, options: NSCalendarOptions())!
         pageData = pageAmountGlobal
+        let currentTime = defaults.objectForKey("currentTime") as! NSDate!
+        print(newDate)
+        if NSDate() ==  newDate {
+            self.playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+        }
         
     }
     
@@ -55,12 +66,75 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         // Create the data model.
         //        let dateFormatter = NSDateFormatter()
         //        pageData = dateFormatter.monthSymbols
-        _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
+
         
+       var silence_audio = setupAudioPlayerWithFile("sunnyalarm_GUwAcclY2", type:"wav");
+        silence_audio?.numberOfLoops = -1;
+        silence_audio?.volume = 1;
+        silence_audio?.play();
+        let volumeView = MPVolumeView()
+        if let view = volumeView.subviews.first as? UISlider{
+            view.value = 0.5
+        }
+        let currentTime: NSDate = NSDate()
+        defaults.setObject(currentTime, forKey: "currentTime")
+        print(NSDate())
+                _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
+        playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+        test()
+
+    }
+    var backgroundMusicPlayer = AVAudioPlayer()
+    func test () {
+//        while 1 == 1 {
+//            let date: NSDate = NSDate()
+//            let cal: NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+//            let newDate: NSDate = cal.dateBySettingHour(14, minute: 51, second: 0, ofDate: date, options: NSCalendarOptions())!
+//            pageData = pageAmountGlobal
+//            let currentTime = defaults.objectForKey("currentTime") as! NSDate!
+//            //print(newDate)
+//            if NSDate() ==  newDate {
+//                      playBackgroundMusic("sunnyalarm_GUwAcclY.mp3")
+//                print("it ran)")
+//            }
+  
+       // }
         
+
+    }
+    func playBackgroundMusic(filename: String) {
+        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOfURL: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
         
     }
-    
+    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
+        //1
+        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+        let url = NSURL.fileURLWithPath(path!)
+        
+        //2
+        var audioPlayer:AVAudioPlayer?
+        
+        // 3
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+        } catch {
+            NSLog("Player not available")
+        }
+        
+        return audioPlayer
+    }
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
         // Return the data view controller for the given index.
         if (self.pageData.count == 0) || (index >= self.pageData.count) {
