@@ -12,8 +12,4 @@ class StatsController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UILabel!
     override func viewDidLoad() {
-        
-        
-    }
-    
-}
+    }}

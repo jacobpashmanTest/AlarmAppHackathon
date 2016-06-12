@@ -7,22 +7,14 @@
 //
 import UIKit
 class DataViewController: UIViewController {
-    
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet var red: UIImageView!
     var dataObject: String = ""
     var redtrueQ = false
     @IBOutlet var Background: UIView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         red.hidden = true
-
-        
-        
-        
         let ovalStartAngle = CGFloat(90.01 * M_PI/180)
         let ovalEndAngle = CGFloat(90 * M_PI/180)
         let ovalRect = CGRectMake(135, 150, 135, 135)
@@ -41,59 +33,32 @@ class DataViewController: UIViewController {
         animateStrokeEnd.fromValue = 0.0
         animateStrokeEnd.toValue = 1.0
         progressLine.addAnimation(animateStrokeEnd, forKey: "animate stroke end animation")
-        
-        
-        
-        
-        
-        
-        
-        
         let swipeDown = UISwipeGestureRecognizer(target:self, action:Selector ("handleSwipes:"))
         let swipeUp = UISwipeGestureRecognizer(target:self, action:Selector ("handleSwipes:"))
         swipeDown.direction = .Down
         swipeUp.direction = .Up
         view.addGestureRecognizer(swipeDown)
-        view.addGestureRecognizer(swipeUp)
-    }
+        view.addGestureRecognizer(swipeUp)}
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-            }
-    func handleSwipes(sender:UISwipeGestureRecognizer) {
-        if (sender.direction == .Down) {
-         
-            print("down")
-            
-            if redtrueQ == false{
-                red.hidden = false
-                redtrueQ = true
-            }else{
-                red.hidden = true
-                redtrueQ = false
-
-            }
-
-            
-        }
-        
-        if (sender.direction == .Up) {
-            print ("up")
-           
-            if redtrueQ == false{
-                red.hidden = false
-                redtrueQ = true
-            }else{
-                red.hidden = true
-                redtrueQ = false
-                
-            }
-        }
-    }
-
- 
+        super.didReceiveMemoryWarning()}
+        func handleSwipes(sender:UISwipeGestureRecognizer) {
+            if (sender.direction == .Down) {
+                    print("down")
+                if  redtrueQ == false{
+                    red.hidden = false
+                    redtrueQ = true
+                }else{
+                    red.hidden = true
+                    redtrueQ = false}}
+            if (sender.direction == .Up) {
+                    print ("up")
+                if  redtrueQ == false{
+                    red.hidden = false
+                    redtrueQ = true
+                }else{
+                    red.hidden = true
+                    redtrueQ = false}}}
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.dataLabel!.text = dataObject
-            }
-}
+        self.dataLabel!.text = dataObject}}
 
