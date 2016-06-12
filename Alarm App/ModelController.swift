@@ -19,8 +19,10 @@ import UIKit
 
 var newTime: String!
 var pageAmountGlobal: [String] = ["test"]
-var pageDataTimeGlobal: [NSDate]!
+var pageDataTimeGlobal: [NSDate] = []
 var pageDayGlobal: [String]!
+var snoozeTime: [Int]!
+
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var pageData = pageAmountGlobal
