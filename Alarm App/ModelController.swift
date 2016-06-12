@@ -16,9 +16,9 @@ import UIKit
  
  There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
  */
-
+let defaults = NSUserDefaults.standardUserDefaults()
 var newTime: String!
-var pageAmountGlobal: [String] = ["test"]
+var pageAmountGlobal: [String] = ["12:00 AM"]
 var pageDataTimeGlobal: [NSDate] = []
 var pageDayGlobal: [String]!
 var snoozeTime: [Int]!
@@ -26,15 +26,22 @@ var snoozeTime: [Int]!
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var pageData = pageAmountGlobal
+    
 
+    func reloadPageData() {
+        pageData = pageAmountGlobal
+        
+    }
 
     override init() {
         super.init()
         // Create the data model.
 //        let dateFormatter = NSDateFormatter()
 //        pageData = dateFormatter.monthSymbols
+         _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ModelController.reloadPageData), userInfo: nil, repeats: true)
 
     }
+    
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
         // Return the data view controller for the given index.
         if (self.pageData.count == 0) || (index >= self.pageData.count) {

@@ -11,6 +11,7 @@ import UIKit
 
 class PlusController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
     var alarmTimeVar: NSDate!
+    var alarmTimeText: String!
     @IBOutlet weak var alarmText: UILabel!
     @IBOutlet weak var alarmTime: UIDatePicker!
     @IBAction func alarmTimeChanged(sender: AnyObject) {
@@ -19,6 +20,7 @@ class PlusController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
         var strDate = dateFormatter.stringFromDate(alarmTime.date)
         print(alarmTime.date)
        alarmTimeVar = alarmTime.date
+        alarmTimeText = strDate
     }
     @IBOutlet weak var minuteLessPicker: UIPickerView!
     let pickerData = ["1","2","3","4","5", "6","7", "8","9", "10","11","12","13", "14", "15", "16","17","18", "19", "20"]
@@ -30,7 +32,7 @@ class PlusController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
     }
     @IBAction func savePressed(sender: AnyObject) {
         pageDataTimeGlobal.append(alarmTimeVar)
-        //pageAmountGlobal.append(<#T##newElement: Element##Element#>)
+        pageAmountGlobal.append(alarmTimeText)
         print("alarmTime \(pageDataTimeGlobal)")
         
     }

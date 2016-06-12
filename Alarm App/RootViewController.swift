@@ -40,6 +40,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.didMoveToParentViewController(self)
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -86,6 +87,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         return .Mid
     }
     
+
 
 
 }
