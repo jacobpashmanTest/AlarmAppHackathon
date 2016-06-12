@@ -27,7 +27,15 @@ class DataViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        2
+        func down(gesture:UIGestureRecognizer){
+            
+        }
+        
+        func up(gesture:UIGestureRecognizer){
+            
+        }
+        
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
